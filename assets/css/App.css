@@ -1,3 +1,6 @@
+/* GOOGLEFONTS */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root {
 	--lavender-web: #E5E3EFff;
 	--white: #FBFBFBff;
@@ -6,4 +9,12 @@
 	--white-2: #FBFBFBff;
 	--davys-gray: #565656ff;
 	--onyx-2: #404040ff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Martel Sans', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
