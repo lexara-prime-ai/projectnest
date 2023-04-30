@@ -200,6 +200,73 @@ header {
 	transform: translateX(4px);
 }
 
+.link-icon {
+	font-size: 1.3rem;
+}
+
+/* ADD PROJECT FORM */
+.add-project-form {
+    position: absolute;
+    top: 25%;
+    right: 43%; 
+    background: var(--white);
+	border: 1px solid #e6e6e6;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .3);
+    width: 25rem;
+    padding: 2rem;
+    transform: scale(0);
+    transform-origin: left; /* TAKES IN TWO PARAMS e.g top left*/
+	z-index: 1;
+	transition: .4s all ease;
+}
+
+.add-project-form.active {
+    transform: scale(1);
+}
+
+.form-title {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	justify-content: end;
+	font-size: 1.5rem;
+	color: var(--davys-gray);
+	padding-bottom: 1rem;
+}
+
+.add-project-form .input-box {
+    margin-bottom: 1rem;
+}
+
+.add-project-form .input-box span {
+    font-size: 1rem;
+	font-weight: 600;
+    color: var(--davys-gray);
+}
+
+.add-project-form .input-box input {
+    font-size: 1rem;
+    color: var(--gray-alt);
+	border: none;
+	border-bottom: 1px solid var(--gray-alt);
+    padding: .5rem;
+    background: transparent;
+    width: 100%;
+    text-transform: none;
+    margin: .5rem 0;
+}
+
+
+.add-project-form .btn {
+    width: 100%;
+	padding: .5rem;
+	border-radius: 9px;
+	border: none;
+
+}
+
+
 /* STYLING FOR INDIVIDUAL LINKS */
 .projects:hover {
 	color: var(--projects);
@@ -215,7 +282,7 @@ header {
 
 /******************************/
 
-.log-out-area {
+.logout-area {
 	padding: 1rem;
 }
 
@@ -231,6 +298,10 @@ header {
 
 .logout:hover {
 	color: var(--davys-gray);
+}
+
+.logout-icon {
+	font-size: 1.3rem;
 }
 
 .is-active {

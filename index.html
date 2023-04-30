@@ -53,45 +53,67 @@
                 <ul class="nav-links">
                     <li class="link-item">
                         <a href="index.html" class="link is-active">
-                            <ion-icon name="grid-outline"></ion-icon>
+                            <ion-icon name="grid-outline" class="link-icon"></ion-icon>
                             Dasboard
                         </a>
                     </li>
                     <li class="link-item">
                         <a href="index.html" class="link projects">
-                            <ion-icon name="layers-outline"></ion-icon>
+                            <ion-icon name="layers-outline" class="link-icon"></ion-icon>
                             Projects
                         </a>
                     </li>
                     <li class="link-item">
                         <a href="index.html" class="link categories">
-                            <ion-icon name="pricetag-outline"></ion-icon>
+                            <ion-icon name="pricetag-outline" class="link-icon"></ion-icon>
                             Categories
                         </a>
                     </li>
                     <li class="link-item">
                         <a href="index.html" class="link progress">
-                            <ion-icon name="sync-outline"></ion-icon>
+                            <ion-icon name="sync-outline" class="link-icon"></ion-icon>
                             Progress
                         </a>
                     </li>
                     <li class="link-item">
-                        <a href="index.html" class="link">
-                            <ion-icon name="add-outline"></ion-icon>
+                        <a id="add-projects" class="link">
+                            <ion-icon name="add-outline" class="link-icon"></ion-icon>
                             add projects
                         </a>
+
+                        <!-- ADD PRODUCT FORM -->
+                        <form action="#" class="add-project-form">
+
+                            <h2 class="form-title">
+                                <img src="./assets/images/logos/logo_icon.png" alt="logo" class="logo-icon">
+                                Add project
+                            </h2>
+
+                            <div class="input-box">
+                              <span>Project name</span>
+                              <input type="text" placeholder="Project name..." required>
+                            </div>
+                      
+                            <div class="input-box">
+                              <span>password</span>
+                              <input type="text" placeholder="Password...">
+                            </div>
+                      
+                            <input type="submit" class="btn" value="+ Add">
+                        </form>
+
                     </li>
                     <li class="link-item">
                         <a href="index.html" class="link">
-                            <ion-icon name="add-outline"></ion-icon>
+                            <ion-icon name="add-outline" class="link-icon"></ion-icon>
                             assign
                         </a>
                     </li>
                 </ul>
 
-                <div class="log-out-area">
+                <div class="logout-area">
                     <h3 class="logout">
-                        <ion-icon name="exit-outline"></ion-icon>
+                        <ion-icon name="exit-outline" class="logout-icon"></ion-icon>
                         Logout
                     </h3>
                 </div>
@@ -143,7 +165,7 @@
                     </div>
                 </div>
 
-
+                <!-- PROJECT SECTION -->
                 <section class="project-container">
                     <h3 class="section-title">
                         Projects
@@ -346,6 +368,8 @@
 
     </main>
 
+    <script src="./build/App.js" defer></script>
+    <script src="./build/Animate.js" defer></script>
 </body>
 
 </html>
