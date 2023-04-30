@@ -167,8 +167,95 @@ header {
 	transform: scale(1.1);
 }
 
+/*-------------------
+*	PROFILE CARD 
+*-------------------
+*/
+.profile-card {
+    position: absolute;
+    top: 15%;
+    right: 5%; 
+    background: var(--white);
+	border: 1px solid #e6e6e6;
+	border-top: 12px solid var(--projects);
+    border-radius: .5rem;
+    box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .3);
+    width: 15rem;
+    transform: scale(0);
+    transform-origin: top right; /* TAKES IN TWO PARAMS e.g top left*/
+	z-index: 1;
+	transition: .4s all ease;
+}
 
-/* SIDE NAVIGATION */
+.profile-card.active {
+    transform: scale(1);
+}
+
+.profile-card-title {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 900;
+	color: var(--davys-gray);
+	border-bottom: .5px solid var(--davys-gray);
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	transition: .4s all ease;
+}
+
+.profile-card-title:hover {
+	transform: translateY(-4px);
+}
+
+.quick-links {
+	text-align: center;
+}
+
+.quick-link-item {
+	list-style: none;
+	padding-bottom: 1rem;
+	transition: .4s all ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+}
+
+.quick-link-item:hover {
+	transform: translateX(-4px);
+}
+
+.quick-link {
+	text-decoration: none;
+	color: var(--gray-alt);
+	font-weight: 600;
+	transition: .4s all ease;
+}
+
+.quick-link:hover {
+	color: var(--davys-gray);
+}
+
+.release {
+	display: flex;
+	justify-content: end;
+	padding: .5rem;
+}
+
+.version {
+	text-decoration: none;
+	color: var(--davys-gray);
+	font-size: .9rem;
+}
+
+
+
+/* -------------------
+* 	SIDE NAVIGATION 
+* -------------------
+*/
 .navigation {
 	height: 100vh;
 	width: 20vw;
@@ -206,7 +293,10 @@ header {
 	font-size: 1.3rem;
 }
 
-/* ADD PROJECT FORM */
+/* 	-------------------
+*	ADD PROJECT FORM 
+*	-------------------
+*/
 .add-project-form {
     position: absolute;
     top: 15%;
@@ -322,7 +412,10 @@ option {
 
 /**********************************/
 
-/* STYLING FOR INDIVIDUAL LINKS */
+/* ---------------------------- 
+* STYLING FOR INDIVIDUAL LINKS 
+* ----------------------------
+*/
 .projects:hover {
 	color: var(--projects);
 }
@@ -375,7 +468,10 @@ option {
 	width: 80vw;
 }
 
-/* OVERVIEW | CARDS  */
+/*----------------- 
+* OVERVIEW | CARDS  
+* -----------------
+*/
 .section-title {
 	font-size: 1rem;
 	padding: 1rem;
@@ -416,7 +512,10 @@ option {
 	font-size: 1.5rem;
 }
 
-/* STYLING FOR INDIVIDUAL CARD ICONS */
+/* ---------------------------------
+* STYLING FOR INDIVIDUAL CARD ICONS 
+* ----------------------------------
+*/
 .tasks-icon {
 	color: var(--white-alt);
 	padding: .5rem;
@@ -456,7 +555,10 @@ option {
 	color: var(--gray-alt);
 }
 
-/* STYLING FOR INDIVIDUAL OVERVIEW CARDS */
+/* -------------------------------------- 
+* STYLING FOR INDIVIDUAL OVERVIEW CARDS 
+* --------------------------------------
+*/
 .project-overview {
 	border-bottom: 6px solid var(--projects);
 }
@@ -470,8 +572,10 @@ option {
 }
 /***********************************/
 
-/* PROJECTS */
-/* PROJECT CARDS */
+/* ----------------------------
+*	 PROJECTS | PROJECT CARDS
+*------------------------------
+*/
 .project-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -506,6 +610,7 @@ option {
 .update-icon:hover {
 	transform: scale(1.1);
 	color: var(--users);
+	transform: rotate(360deg);
 }
 
 .delete-icon:hover {
