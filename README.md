@@ -12,4 +12,4 @@ A simple *Project Management* Web Application
 
 *Mobile preview*
 
-![mobile](https://github.com/projectfinalaudio/projectnest/blob/admin_dashboard/previews/admin%20dashboard(mobile%20view).png?raw=true)
+![mobile](https://github.com/projectfinalaudio/projectnest/blob/admin_dashboard/previews/admin%20dashboard(mobile%20view).png?raw=true height=200)
