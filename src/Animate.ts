@@ -1,3 +1,4 @@
+// PROJECT FORM POP UP ANIMATION
 // ADD PROJECT BUTTON
 const addProjectBtn = document.getElementById('add-projects') as HTMLElement;
 
@@ -11,3 +12,7 @@ function displayAddProjectForm(event: Event) {
 }
 
 addProjectBtn.addEventListener('click', displayAddProjectForm);
+
+// PROFILE POP UP ANIMATION
+// PROFILE ICON
+

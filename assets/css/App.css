@@ -4,6 +4,7 @@
 :root {
 	/* COLOR PALETTE */
 	--lavender-web: #E5E3EFff;
+	--cyan: #aec7c6;
 	--white: #FBFBFBff;
 	--white-alt: #eeeeee;
 	--onyx: #3B3B3Bff;
@@ -101,6 +102,7 @@ header {
 	transition: .4s all ease;
 }
 
+/* STYLE INPUT PLACEHOLDER TEXT */
 ::placeholder {
 	color: var(--gray-alt);
 	opacity: 1;
@@ -207,16 +209,17 @@ header {
 /* ADD PROJECT FORM */
 .add-project-form {
     position: absolute;
-    top: 25%;
-    right: 43%; 
+    top: 15%;
+    right: 45%; 
     background: var(--white);
 	border: 1px solid #e6e6e6;
+	border-top: 12px solid var(--projects);
     border-radius: .5rem;
     box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .3);
     width: 25rem;
     padding: 2rem;
     transform: scale(0);
-    transform-origin: left; /* TAKES IN TWO PARAMS e.g top left*/
+    transform-origin: bottom left; /* TAKES IN TWO PARAMS e.g top left*/
 	z-index: 1;
 	transition: .4s all ease;
 }
@@ -230,9 +233,15 @@ header {
 	align-items: center;
 	gap: .5rem;
 	justify-content: end;
-	font-size: 1.5rem;
+	font-size: 1rem;
+	font-weight: 900;
 	color: var(--davys-gray);
 	padding-bottom: 1rem;
+	transition: .4s all ease;
+}
+
+.form-title:hover {
+	transform: translateY(-4px);
 }
 
 .add-project-form .input-box {
@@ -241,13 +250,14 @@ header {
 
 .add-project-form .input-box span {
     font-size: 1rem;
-	font-weight: 600;
-    color: var(--davys-gray);
+	font-weight: 900;
+    color: var(--cyan);
 }
 
 .add-project-form .input-box input {
-    font-size: 1rem;
-    color: var(--gray-alt);
+    font-size: .9rem;
+	font-weight: 600;
+    color: var(--davys-gray);
 	border: none;
 	border-bottom: 1px solid var(--gray-alt);
     padding: .5rem;
@@ -255,17 +265,62 @@ header {
     width: 100%;
     text-transform: none;
     margin: .5rem 0;
+	transition: .4s all ease;
 }
 
+.add-project-form .input-box input:focus {
+	outline: none;
+	box-shadow: 0 .5rem 0 0 rgba(26, 144, 255, 0.2);
+}
+
+.add-project-form .input-box input:hover {
+	border-bottom: 1px solid var(--projects);
+}
+
+select {
+	width: 100%;
+	border: none;
+	background: transparent;
+	color: var(--gray-alt);
+	font-weight: 900;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: .4s all ease;
+}
+
+select:hover {
+	color: var(--davys-gray);
+	transform: translateY(-4px);
+}
+
+option {
+	font-weight: 500;
+	font-size: .8rem;
+	letter-spacing: 1px;
+	background: var(--white);
+	color: var(--dark);
+}
 
 .add-project-form .btn {
     width: 100%;
 	padding: .5rem;
-	border-radius: 9px;
+	font-size: 1.2rem;
+	font-weight: 900;
+	background: #333333;
+	color: var(--white);
+	border-radius: 99px;
 	border: none;
-
+	transition: .4s all ease;
+	cursor: pointer;
 }
 
+.add-project-form .btn:hover {
+	background: var(--dark);
+	box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, .2);
+	transform: translateY(-4px);
+}
+
+/**********************************/
 
 /* STYLING FOR INDIVIDUAL LINKS */
 .projects:hover {
