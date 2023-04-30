@@ -330,7 +330,22 @@ header {
 	color: var(--gray-alt);
 }
 
+/* STYLING FOR INDIVIDUAL OVERVIEW CARDS */
+.project-overview {
+	border-bottom: 6px solid var(--projects);
+}
+
+.category-overview {
+	border-bottom: 6px solid var(--categories);
+}
+
+.user-overview {
+	border-bottom: 6px solid var(--users);
+}
+/***********************************/
+
 /* PROJECTS */
+/* PROJECT CARDS */
 .project-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -385,7 +400,7 @@ header {
 	width: 160px;
 }
 
-/* CRITICAL CATEGORY */
+/**** CRITICAL CATEGORY ****/
 .critical h3 {
 	background: rgba(250, 37, 37, 0.438);
 	color: rgb(150, 0, 0);
@@ -456,4 +471,84 @@ header {
 
 .calender-icon {
 	color: var(--projects);
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1240px) {
+
+	.timeline {
+		flex-direction: column;
+	}
+
+	.start-date h3 {
+		font-weight: 600;
+		font-size: .7rem;
+	}
+	
+	.date {
+		font-weight: 900;
+		font-size: .7rem;
+	}
+}	
+
+@media (max-width:768px) {
+
+	#search-bar {
+		display: none;
+	}
+
+	#app-container {
+		display: block;
+		height: 100vh;
+	}
+
+	.app-content {
+		width: 100%;
+	}
+
+	.navigation {
+		display: none;
+	}
+
+	.overview-cards {
+		display: block;
+	}
+
+	.card {
+		margin-bottom: 1rem;
+	}
+
+	.project-container {
+		padding-bottom: 1rem;
+	}
+	
+	.project-wrapper {
+		display: block;
+	}
+
+	.project-card {
+		margin-bottom: 1rem;
+	}
+
+	.timeline {
+		flex-direction: row;
+	}
+}
+
+@media (max-width: 376px) {
+	.current-page {
+		display: none;
+	}
+}
+
+@media (max-width:320px) {
+	.timeline {
+		flex-direction: column;
+	}
+
+	.tasks {
+		padding-left: .5rem;
+	}
 }
