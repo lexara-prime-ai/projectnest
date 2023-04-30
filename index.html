@@ -1,12 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projectnest | Admin | Dashboard</title>
+
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <!-- IMPORTS  -->
+    <link rel="stylesheet" href="./assets/css/App.css">
 </head>
+
 <body>
+    <main id="root">
+        <header>
+            <div class="logo">
+                <img src="./assets/images/logos/logo_icon.png" alt="projectnest" class="logo-icon">
+
+                <h3 class="logo-text">
+                    Projectnest
+                </h3>
+            </div>
+
+            <div href="index.html" class="current-page">
+                <ion-icon name="add-outline" class="plus-icon"></ion-icon>
+                <h3 class="current-page-text">
+                    Dashboard
+                </h3>
+            </div>
+
+            <input type="text" id="search-bar" placeholder="Search projects, tasks, categories...">
+
+            <div class="login-area">
+                <a href="#" class="user bell">
+                    <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
+                </a>
+
+                <a href="#" class="user user">
+                    <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+                </a>
+            </div>
+        </header>
+
+        <section id="app-container">
+            <nav class="navigation">
+                <ul class="nav-links">
+                    <li class="link-item">
+                        <a href="index.html" class="link is-active">
+                            <ion-icon name="grid-outline"></ion-icon>
+                            Dasboard
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a href="index.html" class="link projects">
+                            <ion-icon name="layers-outline"></ion-icon>
+                            Projects
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a href="index.html" class="link categories">
+                            <ion-icon name="pricetag-outline"></ion-icon>
+                            Categories
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a href="index.html" class="link progress">
+                            <ion-icon name="sync-outline"></ion-icon>
+                            Progress
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a href="index.html" class="link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            add projects
+                        </a>
+                    </li>
+                    <li class="link-item">
+                        <a href="index.html" class="link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            assign
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="log-out-area">
+                    <h3 class="logout">
+                        <ion-icon name="exit-outline"></ion-icon>
+                        Logout
+                    </h3>
+                </div>
+            </nav>
+
+            <!-- OVERVIEW SECTION -->
+
+            <section class="app-content">
+                <h3 class="section-title">
+                    Overview
+                </h3>
+
+                <div class="overview-cards">
+                    <div class="card project-card">
+                        <ion-icon name="file-tray-full" class="icon tasks-icon"></ion-icon>
+                        <div class="card-info">
+                            <h3 class="card-title">
+                                17
+                            </h3>
+
+                            <p class="content">
+                                Project tasks
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card category-card">
+                        <ion-icon name="pricetag-outline" class="icon categories-icon"></ion-icon>
+                        <div class="card-info">
+                            <h3 class="card-title">
+                                5
+                            </h3>
+
+                            <p class="content">
+                                Categories
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card user-card">
+                        <ion-icon name="people-outline" class="icon users-icon"></ion-icon>
+                        <div class="card-info">
+                            <h3 class="card-title">
+                                7
+                            </h3>
+
+                            <p class="content">
+                                Active users
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="project-container">
+                    <h3 class="section-title">
+                        Projects
+                    </h3>
+                    <!-- PROJECT WRAPPER  -->
+                    <div class="project-wrapper">
+
+                        <div class="project-card">
+                            <div class="action-icons">
+                                <a href="#" class="update" title="Update">
+                                    <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
+                                </a>
+
+                                <a href="#" class="delete" title="Delete">
+                                    <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="project-category">
+                                <h3>
+                                    Software development
+                                </h3>
+                            </div>
+
+                            <div class="project-content">
+                                <h2 class="project-title">
+                                    Bug fixing
+                                </h2>
+
+                                <ul class="tasks">
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Software Upgrades
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Interfaces
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Antivirus software
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Upgrades
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="start-date">
+                                    <ion-icon name="calendar-outline" class="calender-icon"></ion-icon>
+
+                                    <h3>
+                                        Start date:
+                                    </h3>
+                                </div>
+                                
+                                <p class="date">
+                                    30 April, 2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="action-icons">
+                                <a href="#" class="update" title="Update">
+                                    <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
+                                </a>
+
+                                <a href="#" class="delete" title="Delete">
+                                    <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="project-category">
+                                <h3>
+                                    Web development
+                                </h3>
+                            </div>
+
+                            <div class="project-content">
+                                <h2 class="project-title">
+                                    Bug fixing
+                                </h2>
+
+                                <ul class="tasks">
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Software Upgrades
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Interfaces
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Antivirus software
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Upgrades
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="start-date">
+                                    <ion-icon name="calendar-outline" class="calender-icon"></ion-icon>
+
+                                    <h3>
+                                        Start date:
+                                    </h3>
+                                </div>
+                                
+                                <p class="date">
+                                    15 April, 2023
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="action-icons">
+                                <a href="#" class="update" title="Update">
+                                    <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
+                                </a>
+
+                                <a href="#" class="delete" title="Delete">
+                                    <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
+                                </a>
+                            </div>
+
+                            <div class="project-category critical">
+                                <h3>
+                                    Security
+                                </h3>
+                            </div>
+
+                            <div class="project-content">
+                                <h2 class="project-title">
+                                    Security patches
+                                </h2>
+
+                                <ul class="tasks">
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Software Upgrades
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Interfaces
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Antivirus software
+                                        </a>
+                                    </li>
+                                    <li class="task-item">
+                                        <a href="#" class="task">
+                                            Upgrades
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline">
+                                <div class="start-date">
+                                    <ion-icon name="calendar-outline" class="calender-icon"></ion-icon>
+
+                                    <h3>
+                                        Start date:
+                                    </h3>
+                                </div>
+                                
+                                <p class="date">
+                                    13 April, 2023
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
     
+            </section>
+
+
+          
+
+
+
+    </main>
+
 </body>
+<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
 </html>
