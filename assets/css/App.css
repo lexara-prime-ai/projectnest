@@ -452,6 +452,10 @@ option {
 	font-size: 1.3rem;
 }
 
+/* ---------------------
+*	ACTIVE LINK
+* ----------------------
+*/
 .is-active {
 	background: var(--white-alt);
 	color: var(--davys-gray);
@@ -671,7 +675,10 @@ option {
 	color: var(--gray-alt);
 }
 
-/* TIMELINE */
+/* -----------------
+* 	TIMELINE 
+* -----------------
+*/
 .timeline {
 	display: flex;
 	align-items: center;

@@ -11,6 +11,7 @@ addProjectBtn.addEventListener('click', displayAddProjectForm);
 function displayAddProjectForm(event: Event) {
     event.preventDefault();
     addProjectForm.classList.toggle('active');
+    addProjectBtn.classList.toggle('is-active');
 }
 /////////////////////////////////
 // PROFILE CARD POP UP ANIMATION
