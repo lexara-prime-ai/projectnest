@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "projectName": "Logo design",
+      "assignedTo": "Kelvin",
+      "category": "Graphic design",
+      "level": 2,
+      "id": 1
+    },
+    {
+      "projectName": "UI design",
+      "assignedTo": "Esther",
+      "category": "Web development",
+      "level": 1,
+      "id": 2
+    },
+    {
+      "projectName": "fifty8 sports ui update",
+      "assignedTo": "farhat",
+      "category": "web development",
+      "level": 2,
+      "id": 3
+    }
+  ]
+}

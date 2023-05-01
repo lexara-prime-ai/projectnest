@@ -3,15 +3,13 @@
 
 :root {
 	/* COLOR PALETTE */
-	--lavender-web: #E5E3EFff;
 	--cyan: #aec7c6;
 	--white: #FBFBFBff;
 	--white-alt: #eeeeee;
-	--onyx: #3B3B3Bff;
 	--periwinkle: #C3BEDCff;
 	--davys-gray: #565656ff;
 	--gray-alt: #888888;
-	--onyx-2: #404040ff;
+	--light-gray: #979797;
 	--dark: #242424;
 
 	/* STATE COLORS */
@@ -209,6 +207,10 @@ header {
 	transform: translateY(-4px);
 }
 
+/* ------------------------------
+*	PROFILE CARD LINKS
+* ------------------------------
+*/
 .quick-links {
 	text-align: center;
 }
@@ -360,6 +362,7 @@ header {
 
 .add-project-form .input-box input:focus {
 	outline: none;
+	border-bottom: 1px solid var(--projects);
 	box-shadow: 0 .5rem 0 0 rgba(26, 144, 255, 0.2);
 }
 
@@ -367,6 +370,22 @@ header {
 	border-bottom: 1px solid var(--projects);
 }
 
+::-webkit-input-placeholder { /* Edge */
+	color: var(--light-gray);
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+	color: var(--light-gray);
+  }
+  
+  ::placeholder {
+	color: var(--light-gray);
+  }
+
+/*	------------------------------
+*	STYLING FOR SELECT INPUTS
+*	------------------------------
+*/
 select {
 	width: 100%;
 	border: none;
@@ -633,15 +652,27 @@ option {
 	color: #75437e;
 	padding: .5rem;
 	width: 160px;
+	text-transform: capitalize;
 }
 
-/**** CRITICAL CATEGORY ****/
+/**** COLOR CODING FOR PROJECT CATEGORIES ****/
+.normal h3 {
+	background: #f9d5ff;
+	color: #75437e;
+}
+
 .critical h3 {
 	background: rgba(250, 37, 37, 0.438);
 	color: rgb(150, 0, 0);
 }
 
-.project-title {
+.moderate h3 {
+	background: #ffb13c73;
+	color: #be7017;
+}
+
+/**********************************************/
+.project-name {
 	padding-bottom: .5rem;
 	color: var(--davys-gray);
 	text-transform: capitalize;
