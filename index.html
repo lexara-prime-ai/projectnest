@@ -18,78 +18,79 @@
 </head>
 
 <body>
-    <main id="root">
-        <header>
-            <div class="logo">
-                <img src="./assets/images/logos/logo_icon.png" alt="projectnest" class="logo-icon">
+    <header>
+        <div class="logo">
+            <img src="./assets/images/logos/logo_icon.png" alt="projectnest" class="logo-icon">
 
-                <h3 class="logo-text">
-                    Projectnest
-                </h3>
-            </div>
+            <h3 class="logo-text">
+                Projectnest
+            </h3>
+        </div>
 
-            <div href="index.html" class="current-page">
-                <ion-icon name="add-outline" class="plus-icon"></ion-icon>
-                <h3 class="current-page-text">
-                    Dashboard
-                </h3>
-            </div>
+        <div href="index.html" class="current-page">
+            <ion-icon name="add-outline" class="plus-icon"></ion-icon>
+            <h3 class="current-page-text">
+                Dashboard
+            </h3>
+        </div>
 
-            <input type="text" id="search-bar" placeholder="Search projects, tasks, categories...">
+        <input type="text" id="search-bar" placeholder="Search projects, tasks, categories...">
 
-            <!-- PROFILE AND NOTIFICATION ICONS -->
-            <div class="login-area">
-                <a href="#" class="user bell">
-                    <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
-                </a>
+        <!-- PROFILE AND NOTIFICATION ICONS -->
+        <div class="login-area">
+            <a href="#" class="user bell">
+                <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
+            </a>
 
-                <a href="#" class="user profile">
-                    <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
-                </a>
+            <a href="#" class="user profile">
+                <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+            </a>
 
-                 <!-- PROFILE CARD -->
-                 <div action="#" class="profile-card">
+             <!-- PROFILE CARD -->
+             <div action="#" class="profile-card">
 
-                    <h2 class="profile-card-title">
-                        <img src="./assets/images/logos/logo_icon.png" alt="logo" class="logo-icon">
-                        <span>Admin</span> Dashboard
-                    </h2>
+                <h2 class="profile-card-title">
+                    <img src="./assets/images/logos/logo_icon.png" alt="logo" class="logo-icon">
+                    <span>Admin</span> Dashboard
+                </h2>
 
-                    <ul class="quick-links">
-                        <li class="quick-link-item">
-                            <a href="#" class="quick-link" onclick="App.getAllProjects()">
-                                View projects
-                            </a>
-                        </li>
-                        <li class="quick-link-item">
-                            <ion-icon name="add-circle-outline" class="add-task-card-icon"></ion-icon>
-                            <a href="#" class="quick-link">
-                                Add project
-                            </a>
-                        </li>
-                        <li class="quick-link-item">
-                            <ion-icon name="trash-outline" class="delete-user-card-icon"></ion-icon>
-                            <a href="#" class="quick-link">
-                                Delete user
-                            </a>
-                        </li>
-                        <li class="quick-link-item">
-                            <ion-icon name="create-outline" class="reassign-card-icon"></ion-icon>
-                            <a href="#" class="quick-link">
-                                Re-assign user
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h3 class="release">
-                        <a href="#" class="version">
-                            v1.0.0
+                <ul class="quick-links">
+                    <li class="quick-link-item">
+                        <a href="#" class="quick-link" onclick="App.getAllProjects()">
+                            View projects
                         </a>
-                    </h3>
-                </div>
+                    </li>
+                    <li class="quick-link-item">
+                        <ion-icon name="add-circle-outline" class="add-task-card-icon"></ion-icon>
+                        <a href="#" class="quick-link">
+                            Add project
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <ion-icon name="trash-outline" class="delete-user-card-icon"></ion-icon>
+                        <a href="#" class="quick-link">
+                            Delete user
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <ion-icon name="create-outline" class="reassign-card-icon"></ion-icon>
+                        <a href="#" class="quick-link">
+                            Re-assign user
+                        </a>
+                    </li>
+                </ul>
 
+                <h3 class="release">
+                    <a href="#" class="version">
+                        v1.0.0
+                    </a>
+                </h3>
             </div>
-        </header>
+
+        </div>
+    </header>
+    <main id="root">
+        
 
         <section id="app-container">
             <nav class="navigation">
@@ -235,7 +236,7 @@
                     
                         <!--=====================================-->
 
-                        <div class="project-card">
+                        <!-- <div class="project-card">
                             <div class="action-icons">
                                 <a href="#" class="update" title="Update">
                                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
@@ -294,7 +295,7 @@
                                     30 April, 2023
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="project-card">
                             <div class="action-icons">
@@ -434,7 +435,7 @@
 
     <script src="./build/App.js" defer></script>
     <script src="./build/Animate.js" defer></script>
-    <script src="./build/Test.js"></script>
+    <script src="./build/CheckLevel.js" defer></script>
 </body>
 
 </html>

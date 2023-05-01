@@ -1,16 +1,16 @@
 {
   "projects": [
     {
-      "projectName": "Logo design",
-      "assignedTo": "Kelvin",
-      "category": "Graphic design",
+      "projectName": "Coca Cola logo design",
+      "assignedTo": "kelvinngeiwa",
+      "category": "design",
       "level": 2,
       "id": 1
     },
     {
-      "projectName": "UI design",
-      "assignedTo": "Esther",
-      "category": "Web development",
+      "projectName": "test project",
+      "assignedTo": "esthermuchoki",
+      "category": "web development",
       "level": 1,
       "id": 2
     },
@@ -18,8 +18,29 @@
       "projectName": "fifty8 sports ui update",
       "assignedTo": "farhat",
       "category": "web development",
-      "level": 2,
+      "level": 3,
       "id": 3
+    },
+    {
+      "projectName": "Coca cola logo design",
+      "assignedTo": "jonte",
+      "category": "software",
+      "level": 3,
+      "id": 4
+    },
+    {
+      "projectName": "test project 2",
+      "assignedTo": "farhat",
+      "category": "web development",
+      "level": 1,
+      "id": 5
+    },
+    {
+      "projectName": "test project4",
+      "assignedTo": "jonte",
+      "category": "web development",
+      "level": 2,
+      "id": 6
     }
   ]
 }

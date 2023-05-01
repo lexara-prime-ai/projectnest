@@ -75,21 +75,34 @@ class App {
                 }
             }
         }
+
+
+
         for (let project of projects) {
             // SELECTOR FOR PROJECT CONTAINER | WRAPPER
             const projectWrapper = document.querySelector('.project-wrapper') as HTMLDivElement;
 
-            let selectedLevel:string | null;
+            let categoryLevel:string;
 
-        if (project.level == 0) {
-            selectedLevel = null;
-        } else if (project.level == 1) {
-            selectedLevel = 'Critical';
-        } else if (project.level == 2) {
-            selectedLevel = 'Moderate';
-        } else if (project.level == 3) {
-            selectedLevel = 'Normal';
-        }
+            // SELECTOR FOR PROJECT CATEGORY
+            const projectCategoryIndicators = document.querySelectorAll('.project-category');
+
+                switch (project.level) {
+                    case 1:
+                        categoryLevel = 'critical';
+                        break;
+                    case 2:
+                        categoryLevel = 'moderate';
+                        break;
+                    case 3:
+                        categoryLevel = 'normal';
+                        break;
+                    default:
+                        categoryLevel = 'normal';
+                        break;
+                }
+
+
 
             // PROJECT CARD CONTENT STRUCTURE
             let projectCard = `
@@ -104,7 +117,7 @@ class App {
                 </a>
             </div>
 
-            <div class="project-category">
+            <div class="project-category ${categoryLevel}">
                 <h3>
                     ${project.category}
                 </h3>
@@ -156,6 +169,8 @@ class App {
         `;
 
             projectWrapper.innerHTML += projectCard;
+
+            
 
         }
     }
