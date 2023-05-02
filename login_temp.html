@@ -7,12 +7,34 @@
 
     <!-- IMPORTS -->
     <link rel="stylesheet" href="./assets/css/style_temp.css">
-    <title>Login</title>
+    <!-- SCRIPTS -->
+    <script src="./build/login.js" defer></script>
+    <title>Login | Projectnest</title>
 </head>
-<body>
+<body class="login">
+    <div class="container">
+        <h2 class="text-center">
+            Login
+        </h2>
+
+        <form action="/dashboard.html" class="loginForm">
+            <div class="input-group">
+                <label for="username" class="label">Username</label>
+                <input type="text" id="username" class="input">
+                <span class="error-message"></span>
+            </div>
+            <div class="input-group">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" class="input">
+                <span class="error-message"></span>
+            </div>
+            <button class="button" type="submit">Login</button>
+        </form>
+
+    </div>
     
 
 
-    <script src="./build/login.js"></script>
+    
 </body>
 </html>
