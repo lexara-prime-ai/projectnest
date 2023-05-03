@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oops | Wrong | Credentials</title>
-    <link rel="stylesheet" href="oops.css">
+    <link rel="stylesheet" href="../assets/css/oops.css">
 </head>
 
 <body>
@@ -25,16 +25,18 @@
             <ion-icon class="lock" name="lock-closed"></ion-icon>
             <ion-icon class="key" name="key"></ion-icon>
         </div>
-        <h3>Enter your email and we'll
-            <br>
-            send you a link to change a new password
-        </h3>
+        <div class="message">
+            <h4>Enter your email and we'll
+                <br>
+                send you a link to change a new password
+            </h4>
+        </div>
 
         <!--======== FORM CONTAINER ========-->
         <div class="form_details">
             <form>
                 <label for="username"></label>
-                <input type="text" id="username" name="username" placeholder="Username,Email or Phone Number">
+                <input type="text" id="username" name="username" placeholder="Email">
                 <button type="submit" id="sendbtn">
                     Send
                 </button>
