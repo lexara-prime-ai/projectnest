@@ -3,8 +3,8 @@ const log = console.log;
 
 class Login {
     form: any;
-    fields: any;
-    constructor(form: any, fields: any) {
+    fields: unknown;
+    constructor(form: any, fields: unknown) {
         this.form = form;
         this.fields = fields;
         this.validateonSubmit();
@@ -57,6 +57,8 @@ class Login {
             }
         }
     } 
+
+   
 
     setStatus(field: any, message: any, status: string) {
         const errorMessage = field.parentElement.querySelector('.error-message') as HTMLSpanElement;
