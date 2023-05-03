@@ -1,12 +1,27 @@
+/* GOOGLEFONTS */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+	/* COLOR PALETTE */
+	--cyan: #aec7c6;
+	--white: #FBFBFBff;
+	--white-alt: #eeeeee;
+	--periwinkle: #C3BEDCff;
+	--davys-gray: #565656ff;
+	--gray-alt: #888888;
+	--light-gray: #979797;
+	--dark: #242424;
+    --lavender: #B7B0DD;
+
+	/* SHADOWS */
+	--shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .2);
+}
+
 *{
     margin: 0;
     padding: 0;
-
-}
-
-/* GOOGLEFONTS */
-body{
-    font-family: 'Martel Sans', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .main_container{

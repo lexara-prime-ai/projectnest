@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oops Page</title>
-    <link rel="stylesheet" href="stylesopps.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&display=swap" rel="stylesheet">
+    <title>Oops | Wrong | Credentials</title>
+    <link rel="stylesheet" href="oops.css">
 </head>
-<body>
 
-        <div class="main_container">
+<body>
+    <!--======== MAIN CONTAINER ========-->
+    <div class="main_container">
         <div class="logo">
-            <img src="images/MicrosoftTeams-image (2).png" alt="">
+            <img src="../assets/images/logo.png" alt="logo">
             <p>Projectnest</p>
         </div>
-            <div class="header">
-                <h1>Oopps!</h1>
-                <h2>I forgot</h2> 
-            </div>
-            <div class =icons>
-                <ion-icon class="lock" name="lock-closed"></ion-icon>
-                <ion-icon class="key" name="key"></ion-icon>
-             </div>
-             <h3>Enter your email, phone, or username and we'll<br>
-                send you a link to change a new password</h3>
-
-                <div class="form_details">
-                    <form >
-                        <label for="username"></label>
-                        <input type="text" id="username" name="username" placeholder="Username,Email or Phone Number" required><br>
-                        <input type="submit" id="sendbtn" value="Send"> 
-                    </form>
-                </div>
-                <div class="footer_details">
-                    <h4>Don't have an account? <span>Sign Up</span></h4>
-                </div>
+        <div class="header">
+            <h1>Oops!</h1>
+            <h2>I forgot</h2>
         </div>
-                    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-                
+        <!--======== LOCK & KEY ICONS ========-->
+        <div class=icons>
+            <ion-icon class="lock" name="lock-closed"></ion-icon>
+            <ion-icon class="key" name="key"></ion-icon>
+        </div>
+        <h3>Enter your email and we'll
+            <br>
+            send you a link to change a new password
+        </h3>
+
+        <!--======== FORM CONTAINER ========-->
+        <div class="form_details">
+            <form>
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username,Email or Phone Number">
+                <button type="submit" id="sendbtn">
+                    Send
+                </button>
+            </form>
+        </div>
+        <!--======== FOOTER CONTENT ========-->
+        <div class="footer_details">
+            <h4>Don't have an account? <span>Sign Up</span></h4>
+        </div>
+    </div>
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>

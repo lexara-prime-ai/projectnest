@@ -420,9 +420,23 @@ input:focus {
 }
 
 .error-message {
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 900;
     color: tomato;
+    text-transform: capitalize;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .4;
+    }
 }
 
 #signupbtn {
@@ -439,6 +453,10 @@ input:focus {
     background-color: #3B3B3B;
 }
 
+/*-----------------------------
+*   FOOTER SECTION
+*------------------------------
+*/
 .footer_details {
     margin-top: 12%;
     color: var(--lavender);
