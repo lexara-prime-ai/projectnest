@@ -214,6 +214,37 @@
     padding-bottom: 15px;
 
 }
+#username1 {
+    border: 2.5px solid var(--lavender);
+    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 24em;
+    font-size: 16px;
+    padding-bottom: 15px;
+
+}
+#username2 {
+    border: 2.5px solid var(--lavender);
+    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 24em;
+    font-size: 16px;
+    padding-bottom: 15px;
+
+}
+
+#username3 {
+    border: 2.5px solid var(--lavender);
+    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 24em;
+    font-size: 16px;
+    padding-bottom: 15px;
+
+}
 
 #password {
     border: 2.5px solid var(--lavender);

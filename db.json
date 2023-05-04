@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Email": "mucho@gmail.com",
+      "username": "Joe doe",
+      "password": "password123",
+      "confirm_password": "password123"
+    },
+    {
+      "id": 2,
+      "Email": "muchoki@gmail.com",
+      "username": "Joyyb",
+      "password": "read123",
+      "confirm_password": "read123"
+    },
+    {
+      "id": 3,
+      "Usersemail": "mucho@gmail.com",
+      "Userfullname": "esther",
+      "Username": "muchoki",
+      "PasswordII": "123456ad",
+      "password": "123456ad"
+    },
+    {
+      "id": 4,
+      "Usersemail": "muchok.ii",
+      "Userfullname": "wanjohi grace ",
+      "Username": "gwanjohi",
+      "PasswordII": "123456ad",
+      "password": "12345as"
+    },
+    {
+      "id": 5,
+      "Usersemail": "wangeshi@gmail.com",
+      "Userfullname": "esther wamuyu Muchoki",
+      "Username": "e_muchokii",
+      "PasswordII": "123456",
+      "password": "123456"
+    },
+    {
+      "id": 6,
+      "Usersemail": "Wambura Kilonzo@gmail",
+      "Userfullname": "Wambura kilonzo",
+      "Username": "w_kilonzo",
+      "PasswordII": "1234567",
+      "password": "1234567"
+    },
+    {
+      "Usersemail": "wambura@2023",
+      "Userfullname": "Bruce Wambura",
+      "Username": "b_wambura",
+      "PasswordII": "123456789",
+      "password": "123456789",
+      "id": 7
+    },
+    {
+      "Usersemail": "grass@gmail.com",
+      "Userfullname": "Ian mwendwa",
+      "Username": "i_mwendwa",
+      "PasswordII": "123456",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "Usersemail": "muchok.ii@2323",
+      "Userfullname": "wamuyuu trish",
+      "Username": "trish_notyrfr",
+      "PasswordII": "1233456",
+      "password": "12234556",
+      "id": 9
+    },
+    {
+      "Usersemail": "Esther@gmail",
+      "Userfullname": "esther Muchoki ",
+      "Username": "e__mwhoki",
+      "PasswordII": "12345678",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "Usersemail": "muchoki@2020",
+      "Userfullname": "Muchoki FRACE",
+      "Username": "F_last",
+      "PasswordII": "123456789",
+      "password": "123456789",
+      "id": 11
+    }
+  ]
+}
