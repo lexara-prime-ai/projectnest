@@ -1,6 +1,11 @@
 // DEBUGGING
 const log = console.log;
 
+// SELECTORS
+// DELETE PROJECT ICON | TRASH ICON
+const deleteBtn = document.querySelector('.delete') as HTMLElement;
+
+
 class App {
     ///////////////////////////
     // READ PROJECT FORM INPUT
@@ -36,6 +41,7 @@ class App {
         });
         log('project added...');
     }
+
     ///////////////////////////////////////
     // METHOD TO DISPLAY ALL ADDED PROJECTS
     ///////////////////////////////////////
@@ -76,17 +82,15 @@ class App {
             }
         }
 
-
-
         for (let project of projects) {
             // SELECTOR FOR PROJECT CONTAINER | WRAPPER
             const projectWrapper = document.querySelector('.project-wrapper') as HTMLDivElement;
 
             let categoryLevel:string;
 
-            // SELECTOR FOR PROJECT CATEGORY
-            const projectCategoryIndicators = document.querySelectorAll('.project-category');
-
+                /////////////////////////////////////////////////////
+                // SET PROJECT LEVEL BASED ON VALUE RETURNED FROM DB
+                /////////////////////////////////////////////////////
                 switch (project.level) {
                     case 1:
                         categoryLevel = 'critical';
@@ -102,8 +106,6 @@ class App {
                         break;
                 }
 
-
-
             // PROJECT CARD CONTENT STRUCTURE
             let projectCard = `
         <div class="project-card">
@@ -112,9 +114,9 @@ class App {
                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
                 </a>
 
-                <a href="#" class="delete" title="Delete">
+                <button class="delete" title="Delete" onclick="App.deleteProject()">
                     <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
-                </a>
+                </button>
             </div>
 
             <div class="project-category ${categoryLevel}">
@@ -169,9 +171,6 @@ class App {
         `;
 
             projectWrapper.innerHTML += projectCard;
-
-            
-
         }
     }
 
@@ -185,7 +184,24 @@ class App {
             log(project);
         }
     }
+
+    ////////////////////////////////
+    // METHOD FOR DELETING PROJECTS
+    ////////////////////////////////
+    static async deleteProject(id: any) {
+        await fetch(`http://localhost:3000/projects/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        log('Project deleted....');
+    }
+
 }
 
-// 
+// DISPLAY ALL PRODUCTS
 App.displayAllProjects();
+
+

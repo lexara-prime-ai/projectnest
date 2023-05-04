@@ -631,6 +631,9 @@ option {
 
 .update, .delete {
 	text-decoration: none;
+	border: none;
+	background: none;
+	cursor: pointer;
 }
 
 .update-icon, .delete-icon {

@@ -41,6 +41,20 @@
       "category": "web development",
       "level": 2,
       "id": 6
+    },
+    {
+      "projectName": "Computer repair",
+      "assignedTo": "Brian",
+      "category": "software",
+      "level": 1,
+      "id": 7
+    },
+    {
+      "projectName": "fifty8 sports ui update",
+      "assignedTo": "kelvin",
+      "category": "software",
+      "level": 2,
+      "id": 8
     }
   ]
 }

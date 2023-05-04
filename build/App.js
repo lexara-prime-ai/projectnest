@@ -10,6 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 // DEBUGGING
 const log = console.log;
+// SELECTORS
+// DELETE PROJECT ICON | TRASH ICON
+const deleteBtn = document.querySelector('.delete');
 class App {
     ///////////////////////////
     // READ PROJECT FORM INPUT
@@ -91,8 +94,9 @@ class App {
                 // SELECTOR FOR PROJECT CONTAINER | WRAPPER
                 const projectWrapper = document.querySelector('.project-wrapper');
                 let categoryLevel;
-                // SELECTOR FOR PROJECT CATEGORY
-                const projectCategoryIndicators = document.querySelectorAll('.project-category');
+                /////////////////////////////////////////////////////
+                // SET PROJECT LEVEL BASED ON VALUE RETURNED FROM DB
+                /////////////////////////////////////////////////////
                 switch (project.level) {
                     case 1:
                         categoryLevel = 'critical';
@@ -115,9 +119,9 @@ class App {
                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
                 </a>
 
-                <a href="#" class="delete" title="Delete">
+                <button class="delete" title="Delete" onclick="App.deleteProject()">
                     <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
-                </a>
+                </button>
             </div>
 
             <div class="project-category ${categoryLevel}">
@@ -186,7 +190,21 @@ class App {
             }
         });
     }
+    ////////////////////////////////
+    // METHOD FOR DELETING PROJECTS
+    ////////////////////////////////
+    static deleteProject(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield fetch(`http://localhost:3000/projects/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            log('Project deleted....');
+        });
+    }
 }
-// 
+// DISPLAY ALL PRODUCTS
 App.displayAllProjects();
 //# sourceMappingURL=App.js.map
