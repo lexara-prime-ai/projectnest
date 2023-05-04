@@ -1,25 +1,32 @@
 {
   "projects": [
     {
-      "projectName": "fifty8 sports ui update",
-      "assignedTo": "farhat",
-      "category": "web development",
-      "level": 3,
-      "id": 3
-    },
-    {
-      "projectName": "Coca cola logo design",
-      "assignedTo": "jonte",
-      "category": "software",
-      "level": 3,
-      "id": 4
-    },
-    {
       "projectName": "test project 2",
-      "assignedTo": "farhat",
+      "assignedTo": "maria",
       "category": "web development",
       "level": 1,
       "id": 5
+    },
+    {
+      "projectName": "fifty8 sports ui update",
+      "assignedTo": "kelvin",
+      "category": "software",
+      "level": 3,
+      "id": 6
+    },
+    {
+      "projectName": "Coca cola logo design",
+      "assignedTo": "joshuaondieki",
+      "category": "design",
+      "level": 2,
+      "id": 7
+    },
+    {
+      "projectName": "fifty8 sports ui update",
+      "assignedTo": "john",
+      "category": "web development",
+      "level": 1,
+      "id": 8
     }
   ]
 }

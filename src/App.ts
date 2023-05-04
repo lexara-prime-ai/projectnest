@@ -1,8 +1,7 @@
 // DEBUGGING
 const log = console.log;
 
-// SELECTORS
-// DELETE PROJECT ICON | TRASH ICON
+// SELECTOR FOR DELETE PROJECT ICON | TRASH ICON
 const deleteBtn = document.querySelector('.delete') as HTMLElement;
 
 
@@ -28,7 +27,6 @@ class App {
     // METHOD FOR ADDING PROJECTS
     //////////////////////////////
     static async addProject() {
-        // event.preventDefault();
         // CREATE NEW PROJECT
         const newProject = App.readProjectFormInput();
         // CREATE POST REQUEST
@@ -72,6 +70,7 @@ class App {
             'November',
             'December'
         ];
+
         // GET CURRENT MONTH
         function getMonth(): any {
             for (let index: number = 0; index < months.length; index++) {
@@ -82,37 +81,41 @@ class App {
             }
         }
 
+        /////////////////////////
+        // LOOP THROUGH RESPONSE
+        /////////////////////////
         for (let project of projects) {
             // SELECTOR FOR PROJECT CONTAINER | WRAPPER
             const projectWrapper = document.querySelector('.project-wrapper') as HTMLDivElement;
 
-            let categoryLevel:string;
+            // CREATE VARIABLE TO STORE CATEGORY LEVEL : critical | moderate | normal
+            let categoryLevel: string;
 
-                /////////////////////////////////////////////////////
-                // SET PROJECT LEVEL BASED ON VALUE RETURNED FROM DB
-                /////////////////////////////////////////////////////
-                switch (project.level) {
-                    case 1:
-                        categoryLevel = 'critical';
-                        break;
-                    case 2:
-                        categoryLevel = 'moderate';
-                        break;
-                    case 3:
-                        categoryLevel = 'normal';
-                        break;
-                    default:
-                        categoryLevel = 'normal';
-                        break;
-                }
+            /////////////////////////////////////////////////////
+            // SET PROJECT LEVEL BASED ON VALUE RETURNED FROM DB
+            /////////////////////////////////////////////////////
+            switch (project.level) {
+                case 1:
+                    categoryLevel = 'critical';
+                    break;
+                case 2:
+                    categoryLevel = 'moderate';
+                    break;
+                case 3:
+                    categoryLevel = 'normal';
+                    break;
+                default:
+                    categoryLevel = 'normal';
+                    break;
+            }
 
             // PROJECT CARD CONTENT STRUCTURE
             let projectCard = `
         <div class="project-card">
             <div class="action-icons">
-                <a href="#" class="update" title="Update">
+                <button class="update" title="Update" onclick=App.updateProject(${project.id})>
                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
-                </a>
+                </button>
 
                 <button class="delete" title="Delete" onclick=App.deleteProject(${project.id})>
                     <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
@@ -169,12 +172,14 @@ class App {
             </div>
         </div>
         `;
-
+            // APPEND CARD TO PROJECT WRAPPER | CONTAINER WITH EACH ITERATION
             projectWrapper.innerHTML += projectCard;
         }
     }
 
+    /////////////////////////////
     // METHOD TO GET ALL PROJECTS
+    /////////////////////////////
     static async getAllProjects() {
         // FETCH ALL PROJETS
         let response = await fetch(`http://localhost:3000/projects`);
@@ -183,12 +188,58 @@ class App {
         for (let project of projects) {
             log(project);
         }
+    }   
+
+    ///////////////////////////
+    // UPDATING PROJECTS
+    /////////////////////////
+    ////////////////////////
+    // READ PROJECT DETAILS
+    ///////////////////////
+    static async readProjectDetails(id: number) {
+        const response = await fetch(`http://localhost:3000/projects/${id}`);
+        const project = await response.json();
+        // SET INPUT FIELDS USING DATA RETRIEVED FROM API
+        const projectName = (document.getElementById('project-name')! as HTMLInputElement).value = project.projectName;
+        const assignedTo = (document.getElementById('user-name')! as HTMLInputElement).value = project.assignedTo;
+        const category = (document.getElementById('category')! as HTMLInputElement).value = project.category;
+        const projectLevel = (document.getElementById('levels') as HTMLSelectElement).options.selectedIndex = project.level;
+
+        return {
+            projectName,
+            assignedTo,
+            category,
+            projectLevel
+        }
+    }
+
+    static async updateProject(id: number) {
+        // FILL FORM INPUTS WITH WITH DATA FETCHED FROM API BASED ON id
+        App.readProjectDetails(id);
+
+        // CHANGE ADD BUTTON TEXT TO UPDATE
+        const addBtn = document.querySelector('.btn') as HTMLInputElement;
+        if (addBtn.value == '+ Add') {
+            addBtn.value = '^ Update';
+            addBtn.removeAttribute('onclick');
+        }
+
+        // ADD CLICK EVENT TO PROJECT FORM BUTTON
+        addBtn.addEventListener('click', async () => {
+            await fetch(`http://localhost:3000/projects/${id}`, {
+                method: 'PUT',
+                body: JSON.stringify(App.readProjectFormInput()),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        })
     }
 
     ////////////////////////////////
     // METHOD FOR DELETING PROJECTS
     ////////////////////////////////
-    static async deleteProject(id: any) {
+    static async deleteProject(id: number) {
         await fetch(`http://localhost:3000/projects/${id}`, {
             method: 'DELETE',
             headers: {
@@ -198,7 +249,6 @@ class App {
 
         log('Project deleted....');
     }
-
 }
 
 // DISPLAY ALL PRODUCTS

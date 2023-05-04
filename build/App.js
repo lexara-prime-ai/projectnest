@@ -10,8 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 // DEBUGGING
 const log = console.log;
-// SELECTORS
-// DELETE PROJECT ICON | TRASH ICON
+// SELECTOR FOR DELETE PROJECT ICON | TRASH ICON
 const deleteBtn = document.querySelector('.delete');
 class App {
     /////////////////////////// 
@@ -36,7 +35,6 @@ class App {
     //////////////////////////////
     static addProject() {
         return __awaiter(this, void 0, void 0, function* () {
-            // event.preventDefault();
             // CREATE NEW PROJECT
             const newProject = App.readProjectFormInput();
             // CREATE POST REQUEST
@@ -90,9 +88,13 @@ class App {
                     }
                 }
             }
+            /////////////////////////
+            // LOOP THROUGH RESPONSE
+            /////////////////////////
             for (let project of projects) {
                 // SELECTOR FOR PROJECT CONTAINER | WRAPPER
                 const projectWrapper = document.querySelector('.project-wrapper');
+                // CREATE VARIABLE TO STORE CATEGORY LEVEL : critical | moderate | normal
                 let categoryLevel;
                 /////////////////////////////////////////////////////
                 // SET PROJECT LEVEL BASED ON VALUE RETURNED FROM DB
@@ -115,9 +117,9 @@ class App {
                 let projectCard = `
         <div class="project-card">
             <div class="action-icons">
-                <a href="#" class="update" title="Update">
+                <button class="update" title="Update" onclick=App.updateProject(${project.id})>
                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
-                </a>
+                </button>
 
                 <button class="delete" title="Delete" onclick=App.deleteProject(${project.id})>
                     <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
@@ -174,11 +176,14 @@ class App {
             </div>
         </div>
         `;
+                // APPEND CARD TO PROJECT WRAPPER | CONTAINER WITH EACH ITERATION
                 projectWrapper.innerHTML += projectCard;
             }
         });
     }
+    /////////////////////////////
     // METHOD TO GET ALL PROJECTS
+    /////////////////////////////
     static getAllProjects() {
         return __awaiter(this, void 0, void 0, function* () {
             // FETCH ALL PROJETS
@@ -188,6 +193,51 @@ class App {
             for (let project of projects) {
                 log(project);
             }
+        });
+    }
+    ///////////////////////////
+    // UPDATING PROJECTS
+    /////////////////////////
+    ////////////////////////
+    // READ PROJECT DETAILS
+    ///////////////////////
+    static readProjectDetails(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`http://localhost:3000/projects/${id}`);
+            const project = yield response.json();
+            // SET INPUT FIELDS USING DATA RETRIEVED FROM API
+            const projectName = document.getElementById('project-name').value = project.projectName;
+            const assignedTo = document.getElementById('user-name').value = project.assignedTo;
+            const category = document.getElementById('category').value = project.category;
+            const projectLevel = document.getElementById('levels').options.selectedIndex = project.level;
+            return {
+                projectName,
+                assignedTo,
+                category,
+                projectLevel
+            };
+        });
+    }
+    static updateProject(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // FILL FORM INPUTS WITH WITH DATA FETCHED FROM API BASED ON id
+            App.readProjectDetails(id);
+            // CHANGE ADD BUTTON TEXT TO UPDATE
+            const addBtn = document.querySelector('.btn');
+            if (addBtn.value == '+ Add') {
+                addBtn.value = '^ Update';
+                addBtn.removeAttribute('onclick');
+            }
+            // ADD CLICK EVENT TO PROJECT FORM BUTTON
+            addBtn.addEventListener('click', () => __awaiter(this, void 0, void 0, function* () {
+                yield fetch(`http://localhost:3000/projects/${id}`, {
+                    method: 'PUT',
+                    body: JSON.stringify(App.readProjectFormInput()),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+            }));
         });
     }
     ////////////////////////////////
