@@ -7,7 +7,7 @@ const deleteBtn = document.querySelector('.delete') as HTMLElement;
 
 
 class App {
-    ///////////////////////////
+    /////////////////////////// 
     // READ PROJECT FORM INPUT
     ///////////////////////////
     static readProjectFormInput() {
@@ -114,7 +114,7 @@ class App {
                     <ion-icon name="refresh-outline" class="update-icon"></ion-icon>
                 </a>
 
-                <button class="delete" title="Delete" onclick="App.deleteProject()">
+                <button class="delete" title="Delete" onclick=App.deleteProject(${project.id})>
                     <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
                 </button>
             </div>
