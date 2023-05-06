@@ -10,8 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 // DEBUGGING
 const log = console.log;
-// SELECTOR FOR DELETE PROJECT ICON | TRASH ICON
-const deleteBtn = document.querySelector('.delete');
 class App {
     /////////////////////////// 
     // READ PROJECT FORM INPUT
@@ -222,8 +220,19 @@ class App {
         return __awaiter(this, void 0, void 0, function* () {
             // FILL FORM INPUTS WITH WITH DATA FETCHED FROM API BASED ON id
             App.readProjectDetails(id);
-            // CHANGE ADD BUTTON TEXT TO UPDATE
+            // SELECTORS
+            const addProjectForm = document.querySelector('.add-project-form');
             const addBtn = document.querySelector('.btn');
+            const assignUserField = document.querySelector('.assign-user');
+            // APPEND CLASS TO PROJECT FORM
+            addProjectForm.classList.toggle('active');
+            // CHANGE ASSIGN USER TEXT TO REASSIGN USER
+            if (assignUserField.textContent == 'Assign user') {
+                assignUserField.textContent = 'Reassign user';
+            }
+            // CHANGE ADD BUTTON TEXT TO UPDATE AND
+            // REMOVE ONCLICK ATTRIBUTE FOR
+            // PREVIOUS METHOD
             if (addBtn.value == '+ Add') {
                 addBtn.value = '^ Update';
                 addBtn.removeAttribute('onclick');

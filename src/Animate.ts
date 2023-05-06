@@ -1,15 +1,22 @@
 /////////////////////////////////
 // PROJECT FORM POP UP ANIMATION
 ////////////////////////////////
-// ADD PROJECT BUTTON
+// ADD PROJECT BUTTONS
 const addProjectBtn = document.getElementById('add-projects') as HTMLElement;
+const profileAddBtn = document.getElementById('quick-add') as HTMLElement;
 // ADD PROJECT FORM
 const addProjectForm = document.querySelector('.add-project-form') as HTMLFormElement;
-// EVENT LISTENER
+// EVENT LISTENERS
 addProjectBtn.addEventListener('click', displayAddProjectForm);
+profileAddBtn.addEventListener('click', displayAddProjectForm);
 // DISPLAY FORM TO ADD PROJECT
 function displayAddProjectForm(event: Event) {
     event.preventDefault();
+    // CHANGE ADD BUTTON TEXT TO ADD IF TEXT IS EQUAL TO UPDATE
+    const addBtn = document.querySelector('.btn') as HTMLInputElement;
+    if (addBtn.value == '^ Update') {
+        addBtn.value = '+ Add';
+    }
     addProjectForm.classList.toggle('active');
     addProjectBtn.classList.toggle('is-active');
 }

@@ -1,10 +1,6 @@
 // DEBUGGING
 const log = console.log;
 
-// SELECTOR FOR DELETE PROJECT ICON | TRASH ICON
-const deleteBtn = document.querySelector('.delete') as HTMLElement;
-
-
 class App {
     /////////////////////////// 
     // READ PROJECT FORM INPUT
@@ -216,9 +212,22 @@ class App {
     static async updateProject(id: number) {
         // FILL FORM INPUTS WITH WITH DATA FETCHED FROM API BASED ON id
         App.readProjectDetails(id);
-
-        // CHANGE ADD BUTTON TEXT TO UPDATE
+        // SELECTORS
+        const addProjectForm = document.querySelector('.add-project-form') as HTMLFormElement;
         const addBtn = document.querySelector('.btn') as HTMLInputElement;
+        const assignUserField = document.querySelector('.assign-user') as HTMLElement;
+
+        // APPEND CLASS TO PROJECT FORM
+        addProjectForm.classList.toggle('active');
+
+        // CHANGE ASSIGN USER TEXT TO REASSIGN USER
+        if (assignUserField.textContent == 'Assign user') {
+            assignUserField.textContent = 'Reassign user';
+        }
+
+        // CHANGE ADD BUTTON TEXT TO UPDATE AND
+        // REMOVE ONCLICK ATTRIBUTE FOR
+        // PREVIOUS METHOD
         if (addBtn.value == '+ Add') {
             addBtn.value = '^ Update';
             addBtn.removeAttribute('onclick');

@@ -37,6 +37,15 @@ body {
 	overflow-x: hidden;
 }
 
+/* STYLING FOR SCROLLBAR */
+::-webkit-scrollbar{
+    opacity:0;
+    background: transparent;
+}
+::-webkit-scrollbar:hover{
+    opacity: 1;
+}
+
 /* HEADER */
 header {
 	display: flex;
