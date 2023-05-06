@@ -1,15 +1,8 @@
 {
   "projects": [
     {
-      "projectName": "test project 2",
-      "assignedTo": "maria",
-      "category": "web development",
-      "level": 1,
-      "id": 5
-    },
-    {
-      "projectName": "fifty8 sports ui update",
-      "assignedTo": "kelvin",
+      "projectName": "fifty8 sports ui updat000e",
+      "assignedTo": "john",
       "category": "software",
       "level": 3,
       "id": 6
@@ -27,6 +20,13 @@
       "category": "web development",
       "level": 1,
       "id": 8
+    },
+    {
+      "projectName": "Some new project updated",
+      "assignedTo": "Zara",
+      "category": "Operating Systems",
+      "level": 1,
+      "id": 9
     }
   ]
 }
