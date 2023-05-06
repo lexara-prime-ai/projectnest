@@ -39,7 +39,8 @@ body {
 
 /* STYLING FOR SCROLLBAR */
 ::-webkit-scrollbar{
-    opacity:0;
+	width: 0px;
+    opacity:.8;
     background: transparent;
 }
 ::-webkit-scrollbar:hover{

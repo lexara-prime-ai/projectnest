@@ -255,7 +255,6 @@ class App {
                 'Content-Type': 'application/json'
             }
         });
-
         log('Project deleted....');
     }
 }

@@ -11,6 +11,10 @@
 
     <!-- IMPORTS  -->
     <link rel="stylesheet" href="../assets/css/users.css">
+
+    <!-- SCRIPTS -->
+    <script src="../build/Users.js" defer></script>
+
     <!-- IONICONS -->
     <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
@@ -34,14 +38,47 @@
             </h3>
         </div>
         <a href="../index.html" class="return-to-dashboard">
-            <ion-icon name="chevron-back-circle"></ion-icon>
-            Return to dashboard
+            <ion-icon name="chevron-back-circle" class="back"></ion-icon>
+            <p>
+                Return to dashboard
+            </p>
         </a>
     </header>
 
+    <!-- USER CONTAINER -->
+    <section class="user-container" data-users="users">
 
-    <section class="user-container">
-        TESTING
+        <div class="section-title">
+            <h2 class="title">
+                <span>
+                    Active
+                </span>
+                 Users
+            </h2>
+        </div>
+
+        <!-- USER CARD -->
+        <!-- <div class="user-card selected">
+            <div class="user">
+                <a href="#" class="user-icon">
+                    <ion-icon name="person-outline" class="user-icon"></ion-icon>
+                </a>
+    
+                <h2 class="user-name">
+                    John Mwaniki
+                </h2>
+            </div>
+
+            <div class="user-status">
+                <h3 class="status active">
+                    active
+                </h3>
+            </div>
+
+            <a href="#" class="trash-icon">
+                <ion-icon name="trash-outline" class="delete-icon"></ion-icon>
+            </a>
+        </div> -->
     </section>
 
 
