@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <!-- STYLE SHEET -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- SCRIPTS -->
+    <script src="./build/register.js" defer></script>
 </head>
+
 <body>
-    <div class ="maincontainer">
+    <div class="maincontainer">
         <div class="logo">
-            <img src="images/MicrosoftTeams-image (2).png" alt="">
-            <p>Projectnest</p>
+            <img src="images/logo.png" alt="logo">
+            <p>
+                Projectnest
+            </p>
         </div>
-            <div class="header">
-                 <h1> Hi! Welcome</h1>
-                 <h2>Please register below</h2> 
-            </div>
-            <div class="form_details">
-                 <form >
-                        <label for="username"></label>
-                        <input type="text" id="username1" name="username" placeholder="Email" required><br>
 
-                        <label for="username"></label>
-                        <input type="text" id="username2" name="username" placeholder="FullName" required><br>
+        <div class="header">
+            <h1> 
+                Hi! Welcome
+            </h1>
+            <h2>
+                Please register below
+            </h2>
+        </div>
+        <!-- FORM DETAILS -->
+        <section class="form_details">
 
-                        <label for="username"></label>
-                        <input type="text" id="username3" name="username" placeholder="Username" required><br>
-                     <div class="passwordcontainer_register">
-                             <label for="password"></label>
-                             <input type="password" id="passwordII" name="password" placeholder="Password" required> <ion-icon class="iconone" name="eye-off"></ion-icon> <br>
-                             <p style="line-height: 1.5;">Password must least 6 characters, contain number and <br>capial.</p>
-                             <label for="password"></label>
-                             <input type="password" id="password" name="password" placeholder="Confirm Password" required> <ion-icon class="icontwo" name="eye-off"></ion-icon>  <br>
-                      </div>
-                       <h4>Have an account? <span>Log In</span></h4>
-                        <input type="submit" id="signupbtn" value="Sign Up" > 
-                 </form>
-                     
-             </div>
-     <script src="dist/appli.js" type="module" defer></script>
-     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <form>
+            
+                <input type="text" id="email" name="username" placeholder="Email" required><br>
+
+                <input type="text" id="fullname" name="username" placeholder="FullName" required><br>
+
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+
+                <div class="passwordcontainer_register">
+        
+                    <input type="password" id="confirm-password" name="password" placeholder="Password" required> 
+                    
+                    <ion-icon class="iconone" name="eye-off"></ion-icon>
+
+                    <p style="line-height: 1.5;">
+                        Password must least 6 characters, contain number and <br>capial.
+                    </p>
+                    <input type="password" id="password" name="password" placeholder="Confirm Password" required>
+                    <ion-icon class="icontwo" name="eye-off"></ion-icon>
+                </div>
+                <h4>
+                    Have an account? 
+                    <span>Log In</span>
+                </h4>
+                <!-- SIGN UP BUTTON -->
+                <button type="submit" id="signupbtn">
+                    Sign Up
+                </button>
+            </form>
+
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>

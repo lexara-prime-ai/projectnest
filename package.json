@@ -1,0 +1,16 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "Authentication module for Projectnest",
+  "main": "./src/register.ts",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build"
+  },
+  "keywords": [
+    "Authentication",
+    "moudule"
+  ],
+  "author": "Projectnest",
+  "license": "ISC"
+}

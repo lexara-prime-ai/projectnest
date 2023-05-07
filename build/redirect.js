@@ -6,3 +6,4 @@ function redirect(event) {
 }
 // const submitBtn = document.getElementById("signupbtn") as HTMLElement
 // submitBtn.addEventListener("click", Redirect.redirect)
+//# sourceMappingURL=redirect.js.map
